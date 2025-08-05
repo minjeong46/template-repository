@@ -6,6 +6,10 @@ on:
             - ".github/labels.json" # labels.json이 수정되면 자동 실행
     workflow_dispatch: # 수동으로도 실행 가능 (GitHub UI에서)
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
     sync-labels:
         runs-on: ubuntu-latest
